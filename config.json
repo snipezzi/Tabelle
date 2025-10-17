@@ -1,0 +1,9 @@
+{
+  "title": "Tabellen 2004–2090",
+  "subtitle": "Jährlich +100 Personen ab 1000 Grundbevölkerung",
+  "currency": "Menschen",
+  "start_year": 2004,
+  "end_year": 2090,
+  "base_revenue": 1000,
+  "annual_increase": 100
+}

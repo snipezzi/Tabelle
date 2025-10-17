@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coole Webseite</title>
+    <style>
+        /* ─────────────────────────────── */
+        /* 🎨 DESIGN-KONFIGURATION (alles anpassbar!) */
+        /* ─────────────────────────────── */
+        :root {
+            /* Hintergrund & Overlay */
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --content-bg: rgba(0, 0, 0, 0.7);
+            --content-border-color: rgba(255, 255, 255, 0.1);
+
+            /* Text */
+            --text-color: green;
+            --text-secondary: #ddd;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-size-h1: 3rem;
+            --font-size-p: 1.2rem;
+            --line-height-p: 1.6;
+
+            /* Button */
+            --btn-gradient-start: #ff6b6b;
+            --btn-gradient-end: #ee5a24;
+            --btn-text-color: white;
+            --btn-padding: 15px 40px;
+            --btn-radius: 50px;
+            --btn-font-size: 1.2rem;
+            --btn-letter-spacing: 2px;
+            --btn-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            --btn-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+            /* Feature Cards */
+            --feature-bg: rgba(255, 255, 255, 0.1);
+            --feature-bg-hover: rgba(255, 255, 255, 0.2);
+            --feature-width: 200px;
+            --feature-padding: 20px;
+            --feature-radius: 15px;
+            --feature-title-color: #ff6b6b;
+
+            /* Abstände & Layout */
+            --container-padding: 40px;
+            --container-max-width: 800px;
+            --gap-features: 10px;
+            --space-h1: 20px;
+            --space-p: 30px;
+            --space-features: 40px;
+        }
+
+        /* ─────────────────────────────── */
+        /* 🧱 GLOBALER STIL (nutzt die Config) */
+        /* ─────────────────────────────── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            background: var(--content-bg);
+            padding: var(--container-padding);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--content-border-color);
+        }
+
+        h1 {
+            font-size: var(--font-size-h1);
+            margin-bottom: var(--space-h1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        p {
+            font-size: var(--font-size-p);
+            line-height: var(--line-height-p);
+            margin-bottom: var(--space-p);
+            color: var(--text-secondary);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
+            color: var(--btn-text-color);
+            border: none;
+            padding: var(--btn-padding);
+            font-size: var(--btn-font-size);
+            border-radius: var(--btn-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: var(--btn-letter-spacing);
+            font-weight: bold;
+            box-shadow: var(--btn-shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--btn-hover-shadow);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: var(--space-features) 0;
+        }
+
+        .feature {
+            background: var(--feature-bg);
+            padding: var(--feature-padding);
+            border-radius: var(--feature-radius);
+            width: var(--feature-width);
+            margin: var(--gap-features);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            background: var(--feature-bg-hover);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: var(--feature-title-color);
+        }
+
+        /* Optional: Dunkler Modus bei Systemeinstellung (kann auch in Config) */
+        @media (prefers-color-scheme: dark) {
+            /* Du könntest hier z. B. andere Farben setzen */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Willkommen!</h1>
+        <p>Diese Seite ist vollständig über CSS-Variablen konfigurierbar.</p>
+        <button class="btn">Los geht’s!</button>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Schnell</h3>
+                <p>Blitzschnelle Ladezeiten.</p>
+            </div>
+            <div class="feature">
+                <h3>Sicher</h3>
+                <p>Verschlüsselt & privat.</p>
+            </div>
+            <div class="feature">
+                <h3>Schön</h3>
+                <p>Modernes Design.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
